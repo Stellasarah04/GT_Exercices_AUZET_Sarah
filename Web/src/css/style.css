@@ -595,11 +595,22 @@ span {
 
 .DescriptifCartes {
     background: rgba(253, 253, 253, 0.534);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5%;
     margin: 10px;
-    padding:20px;
+    padding:25px 20px;
+    height: 100px;
+    width: 300px;
 }
 
+.TextDescriptifCartes{
+    height: 50px;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /*------------------------------------------------------------------Fin CSS de la pages Cartes-------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------CSS du footer -----------------------------------------------------------------------------------------*/
