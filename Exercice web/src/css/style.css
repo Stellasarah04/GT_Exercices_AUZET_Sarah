@@ -1,0 +1,619 @@
+@font-face {
+    font-family: "bebas_neue";
+    src: url(../assets/fonts/bebas_neue/BebasNeue-Regular.ttf);
+}
+
+@media screen and (min-width: 576px) {
+    .container-carrousel {
+    --widthItem: 250px;
+    --heightItem: 200px;
+    }
+}
+
+@keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:lightgray;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/*---------------------------------------------------------------------------CSS du Header ------------------------------------------------------------------------------------*/
+
+.Logo {
+    position:fixed;
+    left : 30px;
+    width: 100px;
+    height: 50px;
+}
+
+header {
+    background-image:url("../asset/Image/Menu.jpg");
+    z-index: 10;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+}
+
+.TextMenu{
+    border: 1px solid #fff ;
+    background: linear-gradient(to right, #94f88a , #dee97d);
+    font-size: 30px;
+    color:blueviolet;
+    text-decoration: none;
+    padding: 20px 50px;
+}
+
+.TextBienvenue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-size: 30px;
+    color: linear-gradient(to right, #94f88a , #dee97d);
+}
+
+.MenuDroite{
+    margin: 10px 10px;
+    position:fixed;
+    top : 100px;
+    width: 10%;
+    height: 24vh;
+}
+
+/*---------------------------------------------------------------------Fin CSS du Header -----------------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------CSS de la page Menu Côté. -----------------------------------------------------------------------------*/
+
+.Cat1{
+    background: linear-gradient(to top, #fcba58 , #ff6e6e );
+}
+.Cat2{
+    background: linear-gradient(to top, #dee97d, #fcba58);
+}
+.Cat3{
+    background: linear-gradient(to top, #94f88a, #dee97d);
+}
+.Cat4{
+    background: linear-gradient(to top, #74e3f7, #94f88a );
+}
+
+.Cat1:hover .SousCat1{
+    display: block;
+}
+.Cat1:hover .SousCat2{
+    display: block;
+}
+.Cat1:hover .SousCat3{
+    display: block;
+}
+
+.Cat2:hover .SousCat4{
+    display: block;
+}
+.Cat2:hover .SousCat5{
+    display: block;
+}
+.Cat2:hover .SousCat6{
+    display: block;
+}
+
+.Cat3:hover .SousCat7{
+    display: block;
+}
+.Cat3:hover .SousCat8{
+    display: block;
+}
+.Cat3:hover .SousCat9{
+    display: block;
+}
+
+.Cat4:hover .SousCat10{
+    display: block;
+}
+.Cat4:hover .SousCat11{
+    display: block;
+}
+.Cat4:hover .SousCat12{
+    display: block;
+}
+
+
+.TextCat{
+    border: 1px solid #fff ;
+    display: flex;
+    justify-content: center;
+    color: blueviolet;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.SousCat1{
+    display: none;
+}
+.SousCat2{
+    display: none;
+}
+.SousCat3{
+    display: none;
+}
+
+.SousCat4{
+    display: none;
+}
+.SousCat5{
+    display: none;
+}
+.SousCat6{
+    display: none;
+}
+
+.SousCat7{
+    display: none;
+}
+.SousCat8{
+    display: none;
+}
+.SousCat9{
+    display: none;
+}
+
+.SousCat10{
+    display: none;
+}
+.SousCat11{
+    display: none;
+}
+.SousCat12{
+    display: none;
+}
+
+
+.SousCat1:hover .SousSousCat1{
+    display: block;
+}
+.SousCat1:hover .SousSousCat2{
+    display: block;
+}
+.SousCat2:hover .SousSousCat3{
+    display: block;
+}
+.SousCat2:hover .SousSousCat4{
+    display: block;
+}
+.SousCat3:hover .SousSousCat5{
+    display: block;
+}
+.SousCat3:hover .SousSousCat6{
+    display: block;
+}
+
+.SousCat4:hover .SousSousCat7{
+    display: block;
+}
+.SousCat4:hover .SousSousCat8{
+    display: block;
+}
+.SousCat5:hover .SousSousCat9{
+    display: block;
+}
+.SousCat5:hover .SousSousCat10{
+    display: block;
+}
+.SousCat6:hover .SousSousCat11{
+    display: block;
+}
+.SousCat6:hover .SousSousCat12{
+    display: block;
+}
+
+.SousCat7:hover .SousSousCat13{
+    display: block;
+}
+.SousCat7:hover .SousSousCat14{
+    display: block;
+}
+.SousCat8:hover .SousSousCat15{
+    display: block;
+}
+.SousCat8:hover .SousSousCat16{
+    display: block;
+}
+.SousCat9:hover .SousSousCat17{
+    display: block;
+}
+.SousCat9:hover .SousSousCat18{
+    display: block;
+}
+
+.SousCat10:hover .SousSousCat19{
+    display: block;
+}
+.SousCat10:hover .SousSousCat20{
+    display: block;
+}
+.SousCat11:hover .SousSousCat21{
+    display: block;
+}
+.SousCat11:hover .SousSousCat22{
+    display: block;
+}
+.SousCat12:hover .SousSousCat23{
+    display: block;
+}
+.SousCat12:hover .SousSousCat24{
+    display: block;
+}
+
+.TextSousCat{
+    border: 1px solid #fff ;
+    display: flex;
+    justify-content: center;
+    color: blueviolet;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.SousSousCat1{
+    display:none;
+}
+.SousSousCat2{
+    display:none;
+}
+.SousSousCat3{
+    display:none;
+}
+.SousSousCat4{
+    display:none;
+}
+.SousSousCat5{
+    display:none;
+}
+.SousSousCat6{
+    display:none;
+}
+
+.SousSousCat7{
+    display:none;
+}
+.SousSousCat8{
+    display:none;
+}
+.SousSousCat9{
+    display:none;
+}
+.SousSousCat10{
+    display:none;
+}
+.SousSousCat11{
+    display:none;
+}
+.SousSousCat12{
+    display:none;
+}
+
+.SousSousCat13{
+    display:none;
+}
+.SousSousCat14{
+    display:none;
+}
+.SousSousCat15{
+    display:none;
+}
+.SousSousCat16{
+    display:none;
+}
+.SousSousCat17{
+    display:none;
+}
+.SousSousCat18{
+    display:none;
+}
+
+.SousSousCat19{
+    display:none;
+}
+.SousSousCat20{
+    display:none;
+}
+.SousSousCat21{
+    display:none;
+}
+.SousSousCat22{
+    display:none;
+}
+.SousSousCat23{
+    display:none;
+}
+.SousSousCat24{
+    display:none;
+}
+
+.TextSousSouscat {
+    border: 1px solid #fff ;
+    display: flex;
+    justify-content: center;
+    color: blueviolet;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.Lorem{
+    margin: 150px 250px 30px 250px;
+}
+
+/*--------------------------------------------------------------Fin CSS de la page Menu Côté.--------------------------------------------------------------------------------*/
+
+/* -------------------------------------------------------------CSS de la page Frise ----------------------------------------------------------------------------------------*/
+.Frise{
+    background: linear-gradient(to top, #74e3f7, #94f88a, #dee97d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px  0px 0px 0px;
+}
+
+.TraitFrise{
+    width: 2px;
+    height: 10vh;
+    background: black;
+    z-index: 2;
+}
+
+.TextFriseDroite{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 600px;
+    height: 150px;
+    margin-left: 599px;
+    padding-left:20px;
+    border-left: 2px solid black ;
+}
+
+.TextFriseGauche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    width: 600px;
+    height: 150px;
+    margin-right: 598px;
+    padding-right: 20px;
+    border-right: 2px solid black;
+}
+
+.Cercle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 3;
+}
+
+/*-----------------------------------------------------------------Fin CSS de lap age Frise----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------CSS de la page Carrousel ---------------------------------------------------------------------------------*/
+
+.parent {
+  position: relative;
+  width: 320px;
+  margin: 415px 800px;
+  perspective: 1000px;
+}
+
+.Carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+}
+span {
+    margin: auto;
+    font-size: 2rem;
+    color: #fff;
+  }
+.FaceCarousel { 
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  display: flex;
+}
+.FaceCarousel:nth-child(1) {
+    background-image: url("../asset/Image/PhotoCarrousel1.png");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .FaceCarousel:nth-child(2) { 
+    background-image: url("../asset/Image/PhotoCarrousel2.png");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .FaceCarousel:nth-child(3) {
+    background-image: url("../asset/Image/PhotoCarrousel3.png");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .FaceCarousel:nth-child(4) {
+    background-image: url("../asset/Image/PhotoCarrousel4.png");
+    transform: rotateY(120deg) translateZ(430px); }
+  .FaceCarousel:nth-child(5) { 
+    background-image: url("../asset/Image/PhotoCarrousel5.png");
+   transform: rotateY(160deg) translateZ(430px); }
+  .FaceCarousel:nth-child(6) { 
+    background-image: url("../asset/Image/PhotoCarrousel6.png");
+   transform: rotateY(200deg) translateZ(430px); }
+  .FaceCarousel:nth-child(7) { 
+    background-image: url("../asset/Image/PhotoCarrousel7.png");
+   transform: rotateY(240deg) translateZ(430px); }
+  .FaceCarousel:nth-child(8) {
+    background-image: url("../asset/Image/PhotoCarrousel8.png");
+    transform: rotateY(280deg) translateZ(430px); }
+  .FaceCarousel:nth-child(9) {
+    background-image: url("../asset/Image/PhotoCarrousel9.png");
+    transform: rotateY(320deg) translateZ(430px); }
+
+/*------------------------------------------------------------------Fin CSS de la page Carrousel ----------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------CSS carrousel js---------------------------------------------------------------------------------*/
+
+  
+.CarousselJS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 100px;
+    padding: 100px;
+}
+  
+.CarousselJS-carrousel {
+    --widthItem: 150px;
+    --heightItem: 100px;
+    width: var(--widthItem);
+    height: var(--heightItem);
+    perspective: 1000px;
+}
+  
+.carrousel {
+    --rotatey: 0;
+    font-size: 4rem;
+    position: relative;
+    transform: rotatey(var(--rotatey));
+    transform-style: preserve-3d;
+    user-select: none;
+    cursor: grab;
+}
+  
+.carrousel-item {
+    opacity: 0.5;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+}
+  
+.carrousel-item:hover {
+    opacity: 1;
+}
+  
+.carrousel,
+.carrousel-item {
+    width: 100%;
+    height: 100%;
+}
+  
+.carrousel-item:nth-child(1) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url(https://picsum.photos/600/400?random=1);
+}
+  
+.carrousel-item:nth-child(2) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url(https://picsum.photos/600/400?random=2);
+}
+  
+.carrousel-item:nth-child(3) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url(https://picsum.photos/600/400?random=3);
+}
+.carrousel-item:nth-child(4) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url(https://picsum.photos/600/400?random=4);
+}
+  
+.carrousel-item:nth-child(5) {
+    --rotate: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url(https://picsum.photos/600/400?random=5);
+}
+  
+.carrousel-item:nth-child(6) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url(https://picsum.photos/600/400?random=6);
+}
+/*-------------------------------------------------------------------------Fin CSS carrousel js------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------CSS de la pages Cartes---------------------------------------------------------------------------------*/
+
+.ParentCartes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.Cartes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, #c774f7, #74e3f7, #94f88a, #dee97d, #fcba58, #ff6e6e);
+    border-radius: 5%;
+    margin: 20px;
+    padding:10px;
+}
+
+.ImageCartes{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+}
+
+
+.DescriptifCartes {
+    background: rgba(253, 253, 253, 0.534);
+    border-radius: 5%;
+    margin: 10px;
+    padding:20px;
+}
+
+
+/*------------------------------------------------------------------Fin CSS de la pages Cartes-------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------CSS du footer -----------------------------------------------------------------------------------------*/
+
+footer{
+    background-image:url("../asset/Image/Menu.jpg");
+    z-index:9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------------------Fin CSS du footer---------------------------------------------------------------------------------------*/
