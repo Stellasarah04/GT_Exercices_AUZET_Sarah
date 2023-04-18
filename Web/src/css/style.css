@@ -33,6 +33,17 @@ body{
     height: 100vh;
 }
 
+body::-webkit-scrollbar{
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #ff6e6e,#fcba58, #dee97d, #94f88a, #74e3f7, #c774f7);
+}
 
 /*---------------------------------------------------------------------------CSS du Header ------------------------------------------------------------------------------------*/
 
@@ -489,11 +500,12 @@ span {
     align-items: center;
     margin : 100px;
     padding: 100px;
+    width: 100%;
 }
   
 .CarousselJS-carrousel {
-    --widthItem: 150px;
-    --heightItem: 100px;
+    --widthItem: 350px;
+    --heightItem: 250px;
     width: var(--widthItem);
     height: var(--heightItem);
     perspective: 1000px;
@@ -592,7 +604,6 @@ span {
     height: 200px;
 }
 
-
 .DescriptifCartes {
     background: rgba(253, 253, 253, 0.534);
     display: flex;
@@ -625,6 +636,5 @@ footer{
     height: 100px;
     width: 100%;
 }
-
 
 /*-------------------------------------------------------------------Fin CSS du footer---------------------------------------------------------------------------------------*/
